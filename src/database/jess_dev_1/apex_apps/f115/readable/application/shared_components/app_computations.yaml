@@ -1,0 +1,183 @@
+---
+- # ====== Application Computation: APPLICATION_TITLE ==========
+  id: 1335976701463984510
+  identification: 
+    item-name: APPLICATION_TITLE
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Function Body
+    language: PL/SQL
+    pl/sql-function-body: |
+      declare
+          l_app_name varchar2(255);
+      begin
+          select nvl(preference_value,:APP_NAME)
+            into l_app_name
+            from eba_ca_preferences
+           where preference_name = 'APPLICATION_TITLE';
+          return l_app_name;
+      exception
+          when others then
+              return :APP_NAME;
+      end;
+
+  subscription: 
+    version-number: 37166093807512
+
+- # ====== Application Computation: EXTERNAL_INTERNAL_BO =======
+  id: 1645201791929994130
+  identification: 
+    item-name: EXTERNAL_INTERNAL_BO
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Include
+
+  configuration: 
+    build-option: Include External / Internal Event Types # 1640732170941805634
+
+  subscription: 
+    version-number: 37166093807526
+
+- # ====== Application Computation: EXTERNAL_INTERNAL_BO =======
+  id: 1645217127310009375
+  identification: 
+    item-name: EXTERNAL_INTERNAL_BO
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Exclude
+
+  configuration: 
+    build-option: MODEL.LOV.NOT_W_ARGUMENT # 1640732170941805634
+
+  subscription: 
+    version-number: 37166093807536
+
+- # ====== Application Computation: EXTERNAL_INTERNAL_BO_NAME ==
+  id: 1701212032002997813
+  identification: 
+    item-name: EXTERNAL_INTERNAL_BO_NAME
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Include External / Internal Event Types
+
+  configuration: 
+    build-option: Include External / Internal Event Types # 1640732170941805634
+
+  subscription: 
+    version-number: 37166093807543
+
+- # ====== Application Computation: MULTIPLE_CAL_BO_NAME =======
+  id: 1866185450847208855
+  identification: 
+    item-name: MULTIPLE_CAL_BO_NAME
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Include Multiple Calendars
+
+  configuration: 
+    build-option: Include Multiple Calendars # 1866183829626190037
+
+  subscription: 
+    version-number: 37166093807552
+
+- # ====== Application Computation: MULTIPLE_CAL_BO ============
+  id: 1866185593585211722
+  identification: 
+    item-name: MULTIPLE_CAL_BO
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Include
+
+  configuration: 
+    build-option: Include Multiple Calendars # 1866183829626190037
+
+  subscription: 
+    version-number: 37166093807561
+
+- # ====== Application Computation: MULTIPLE_CAL_BO ============
+  id: 1866185864033213432
+  identification: 
+    item-name: MULTIPLE_CAL_BO
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Static Value
+    static-value: Exclude
+
+  configuration: 
+    build-option: MODEL.LOV.NOT_W_ARGUMENT # 1866183829626190037
+
+  subscription: 
+    version-number: 37166093807569
+
+- # ====== Application Computation: CALS_RESTRICTED_TO =========
+  id: 1886341255737289491
+  identification: 
+    item-name: CALS_RESTRICTED_TO
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: SQL Query (return single value)
+    sql-query: |
+      select nvl(restricted_to, decode(access_level_id, 3, 'All', null)) 
+      from eba_ca_users
+      where username = :APP_USER
+
+  configuration: 
+    build-option: Include Multiple Calendars # 1866183829626190037
+
+  subscription: 
+    version-number: 37166093807584
+
+- # ====== Application Computation: HOST_URL ===================
+  id: 8035928184845304033
+  identification: 
+    item-name: HOST_URL
+
+  execution: 
+    sequence: 10
+    point: New Session
+
+  computation: 
+    type: Expression
+    language: PL/SQL
+    pl/sql-expression: wwv_flow_utilities.host_url('SCRIPT');
+
+  subscription: 
+    version-number: 37166093807594
+

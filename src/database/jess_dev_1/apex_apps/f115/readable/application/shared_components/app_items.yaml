@@ -1,0 +1,163 @@
+---
+- # ====== Application Item: APPLICATION_TITLE =================
+  id: 1335971984654977046
+  identification: 
+    name: APPLICATION_TITLE
+    scope: Application
+
+  security: 
+    session-state-protection: Checksum Required - Session Level
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807400
+
+- # ====== Application Item: EXTERNAL_INTERNAL_BO ==============
+  id: 1645199716451985860
+  identification: 
+    name: EXTERNAL_INTERNAL_BO
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  configuration: 
+    build-option: Include External / Internal Event Types # 1640732170941805634
+
+  subscription: 
+    version-number: 37166093807439
+
+- # ====== Application Item: EXTERNAL_INTERNAL_BO_NAME =========
+  id: 1701211759611987639
+  identification: 
+    name: EXTERNAL_INTERNAL_BO_NAME
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  configuration: 
+    build-option: Include External / Internal Event Types # 1640732170941805634
+
+  subscription: 
+    version-number: 37166093807448
+
+- # ====== Application Item: MULTIPLE_CAL_BO ===================
+  id: 1866184095246194392
+  identification: 
+    name: MULTIPLE_CAL_BO
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807492
+
+- # ====== Application Item: MULTIPLE_CAL_BO_NAME ==============
+  id: 1866184829189203533
+  identification: 
+    name: MULTIPLE_CAL_BO_NAME
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807500
+
+- # ====== Application Item: CALENDARS_FILTER ==================
+  id: 1866280416724794801
+  identification: 
+    name: CALENDARS_FILTER
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807408
+
+- # ====== Application Item: EVENT_TYPES_FILTER ================
+  id: 1866280688846798134
+  identification: 
+    name: EVENT_TYPES_FILTER
+    scope: Application
+
+  security: 
+    session-state-protection: Checksum Required - Application Level
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807431
+
+- # ====== Application Item: CONTACT_EMAIL =====================
+  id: 1866345667786619494
+  identification: 
+    name: CONTACT_EMAIL
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807424
+
+- # ====== Application Item: CALS_RESTRICTED_TO ================
+  id: 1886340780607271960
+  identification: 
+    name: CALS_RESTRICTED_TO
+    scope: Application
+
+  security: 
+    session-state-protection: Restricted - May not be set from browser
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807416
+
+- # ====== Application Item: LAST_VIEW =========================
+  id: 3265302701236099269
+  identification: 
+    name: LAST_VIEW
+    scope: Application
+
+  security: 
+    session-state-protection: Checksum Required - Session Level
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807482
+
+- # ====== Application Item: F855_TIMEZONE =====================
+  id: 7989568170880355512
+  identification: 
+    name: F855_TIMEZONE
+    scope: Application
+
+  security: 
+    session-state-protection: Checksum Required - Session Level
+    escape-special-characters: true
+
+  subscription: 
+    version-number: 37166093807460
+
+- # ====== Application Item: HOST_URL ==========================
+  id: 8035927276534301607
+  identification: 
+    name: HOST_URL
+    scope: Application
+
+  security: 
+    session-state-protection: Checksum Required - Session Level
+    escape-special-characters: false
+
+  subscription: 
+    version-number: 37166093807473
+
