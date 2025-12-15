@@ -1,0 +1,687 @@
+---
+# ====== Page: Groups ========================================
+id: 16
+identification: 
+  name: Groups
+  alias: GROUPS
+  title: Groups
+  page-group: Administration # 8949470649597181373
+
+appearance: 
+  page-mode: Modal Dialog
+  dialog-template: Theme Default
+  template-options: 
+  - '#DEFAULT#'
+  - ui-dialog--stretch
+  - t-Dialog--noPadding
+
+dialog: 
+  chained: true
+  resizable: false
+
+navigation-menu: 
+  override-user-interface-level: false
+
+navigation: 
+  cursor-focus: First item on page
+  warn-on-unsaved-changes: false
+
+javascript: 
+  function-and-global-variable-declaration: |
+    function refreshParent() {
+        parent.location.reload();
+    }
+  execute-when-page-loads: window.onunload = refreshParent;
+
+security: 
+  authorization-scheme: ADMINISTRATION RIGHTS # 3264005803734937606
+  authentication: Page Requires Authentication
+  deep-linking: Application Default
+  page-access-protection: Arguments Must Have Checksum
+  form-auto-complete: Off
+  browser-cache: Application Default
+
+session-management: 
+  rejoin-sessions: Application Default
+
+advanced: 
+  enable-duplicate-page-submissions: Yes - Enable page to be re-posted
+  reload-on-submit: Always
+
+server-cache: 
+  caching: Disabled
+
+help: 
+  help-text: Groups allow you to email events to a set of emails. Once you create a Group, you must then add Members to it.
+
+regions: 
+- # ====== Region: Groups ======================================
+  id: 8035082169967698409
+  identification: 
+    name: Groups
+    type: Interactive Report
+
+  source: 
+    location: Local Database
+    type: SQL Query
+    sql-query: |
+      select group_id,
+             group_name,
+             (select count(*) from EBA_ca_email_group_mbrs m
+               where m.group_id = g.group_id) nbr_mbrs,
+             CREATED_ON,
+             LOWER(CREATED_BY) CREATED_BY,
+             LAST_UPDATED_ON,
+             LOWER(LAST_UPDATED_BY) LAST_UPDATED_BY
+        from EBA_CA_EMAIL_GROUPS g
+      
+
+  layout: 
+    sequence: 20
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Interactive Report
+    template-options: 
+    - '#DEFAULT#'
+    - t-IRR-region--noBorders
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  server-cache: 
+    caching: Disabled
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 8035082359107698412
+    link: 
+      link-column: Link to Custom Target
+      target: 
+        url: 'f?p=&APP_ID.:17:&SESSION.::&DEBUG.:17:P17_GROUP_ID:#GROUP_ID#'
+        page: 17 # Group Details
+        clear-cache: 17
+        values: 
+          p17_group_id: '#GROUP_ID#'
+
+      link-icon: <span class="fa fa-edit" aria-hidden="true"></span>
+      link-attributes: 'title="Edit #GROUP_NAME#"'
+
+    appearance: 
+      show-null-values-as: '-'
+
+    pagination: 
+      type: Row Ranges X to Y
+      display-position: Bottom - Right
+
+    performance: 
+      lazy-loading: false
+      maximum-rows-to-process: 10000
+
+    messages: 
+      when-no-data-found: No groups found.
+      when-more-data-found: This query returns more than 10,000 rows, please filter your data to ensure complete results.
+
+    search-bar: 
+      include-search-bar: true
+      search-field: true
+      finder-drop-down: true
+      reports-select-list: true
+      rows-per-page-selector: false
+
+    actions-menu: 
+      include-actions-menu: true
+      filter: true
+      select-columns: true
+      rows-per-page: true
+      sort: true
+      control-break: true
+      highlight: true
+      compute: true
+      aggregate: true
+      chart: true
+      group-by: true
+      pivot: true
+      flashback: true
+      save-report: true
+      save-public-report: true
+      reset: true
+      help: true
+      download: true
+      subscription: true
+
+    download: 
+      formats: 
+      - CSV
+      - HTML
+      send-as-email: true
+
+    heading: 
+      fixed-to: Page
+
+    icon-view: 
+      show: false
+
+    detail-view: 
+      show: false
+
+    saved-reports: 
+    - # ====== Saved Report: Primary Report ========================
+      id: 8035083387352698425
+      identification: 
+        name: Primary Report
+        alias: 6238137
+
+    - # ====== Saved Report: with Audit Info =======================
+      id: 8035083582864698429
+      identification: 
+        name: with Audit Info
+        alias: 6238139
+
+    column-groups: 
+    - # ====== Column Group: Audit Info ============================
+      id: 8035082484771698416
+      identification: 
+        name: Audit Info
+
+      layout: 
+        sequence: 20
+
+    - # ====== Column Group: Details ===============================
+      id: 8035082577162698419
+      identification: 
+        name: Details
+
+      layout: 
+        sequence: 10
+
+    columns: 
+    - # ====== Column: CREATED_BY ==================================
+      id: 8035082859260698424
+      identification: 
+        column-name: CREATED_BY
+        type: Plain Text
+
+      heading: 
+        heading: Created By
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 1
+        column-alignment: start
+        group: Audit Info # 8035082484771698416
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+      help: 
+        help-text: The user who created the record.
+
+    - # ====== Column: LAST_UPDATED_BY =============================
+      id: 8035082970172698424
+      identification: 
+        column-name: LAST_UPDATED_BY
+        type: Plain Text
+
+      heading: 
+        heading: Last Updated By
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 2
+        column-alignment: start
+        group: Audit Info # 8035082484771698416
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+      help: 
+        help-text: The user who last updated the record.
+
+    - # ====== Column: GROUP_ID ====================================
+      id: 8035092264948711781
+      identification: 
+        column-name: GROUP_ID
+        type: Hidden
+
+      heading: 
+        heading: Options
+
+      layout: 
+        sequence: 5
+
+      source: 
+        primary-key: false
+
+      security: 
+        escape-special-characters: false
+
+    - # ====== Column: GROUP_NAME ==================================
+      id: 8035092367111711783
+      identification: 
+        column-name: GROUP_NAME
+        type: Plain Text
+
+      heading: 
+        heading: Group Name
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 3
+        column-alignment: start
+        group: Details # 8035082577162698419
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: NBR_MBRS ====================================
+      id: 8035912088037210387
+      identification: 
+        column-name: NBR_MBRS
+        type: Link
+
+      heading: 
+        heading: Members
+        alignment: end
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 4
+        column-alignment: end
+        group: Details # 8035082577162698419
+
+      accessibility: 
+        value-identifies-row: false
+
+      link: 
+        target: 
+          url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.:RIR,CIR:IR_GROUP_ID:#GROUP_ID#'
+          page: 18 # Group Members
+          clear-cache: RIR,CIR
+          values: 
+            ir_group_id: '#GROUP_ID#'
+
+        link-text: '#NBR_MBRS#'
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: CREATED_ON ==================================
+      id: 8035912172958210388
+      identification: 
+        column-name: CREATED_ON
+        type: Plain Text
+
+      heading: 
+        heading: Created
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 6
+        column-alignment: start
+        group: Audit Info # 8035082484771698416
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: SINCE
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+        date-ranges: All
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: LAST_UPDATED_ON =============================
+      id: 8035912257030210388
+      identification: 
+        column-name: LAST_UPDATED_ON
+        type: Plain Text
+
+      heading: 
+        heading: Last Updated
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 7
+        column-alignment: start
+        group: Audit Info # 8035082484771698416
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: SINCE
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+        date-ranges: All
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+buttons: 
+- # ====== Button: RESET =======================================
+  id: 2444171743195223480
+  identification: 
+    button-name: RESET
+    label: Reset
+
+  layout: 
+    sequence: 10
+    region: Groups # 8035082169967698409
+    slot: RIGHT_OF_IR_SEARCH_BAR
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Icon
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    icon: fa-undo-alt
+
+  behavior: 
+    action: Redirect to Page in this Application
+    target: 
+      url: 'f?p=&APP_ID.:&APP_PAGE_ID.:&SESSION.::&DEBUG.:RP,&APP_PAGE_ID.,RIR::'
+      page: '&APP_PAGE_ID.'
+      clear-cache: RP,&APP_PAGE_ID.,RIR
+
+    warn-on-unsaved-changes: Do Not Check
+
+- # ====== Button: CREATE ======================================
+  id: 8035083757954698431
+  identification: 
+    button-name: CREATE
+    label: Add Group
+
+  layout: 
+    sequence: 20
+    region: Groups # 8035082169967698409
+    slot: RIGHT_OF_IR_SEARCH_BAR
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: true
+    template-options: 
+    - '#DEFAULT#'
+
+  behavior: 
+    action: Redirect to Page in this Application
+    target: 
+      url: 'f?p=&APP_ID.:17:&SESSION.::&DEBUG.:RP,17::'
+      page: 17 # Group Details
+      clear-cache: RP,17
+
+    warn-on-unsaved-changes: Do Not Check
+
+dynamic-actions: 
+- # ====== Dynamic Action: Refresh on Add ======================
+  id: 138209396373896283
+  identification: 
+    name: Refresh on Add
+
+  execution: 
+    sequence: 20
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Dialog Closed
+    selection-type: Button
+    button: CREATE # 8035083757954698431
+
+  actions: 
+  - # ====== Action: Refresh =====================================
+    id: 138209515309896284
+    identification: 
+      action: Refresh
+
+    settings: 
+      maintain-pagination: false
+
+    affected-elements: 
+      selection-type: Region
+      region: Groups # 8035082169967698409
+
+    execution: 
+      sequence: 10
+      event: Refresh on Add # 138209396373896283
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Refresh on Edit =====================
+  id: 138209592978896285
+  identification: 
+    name: Refresh on Edit
+
+  execution: 
+    sequence: 30
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Dialog Closed
+    selection-type: Region
+    region: Groups # 8035082169967698409
+
+  actions: 
+  - # ====== Action: Refresh =====================================
+    id: 138209754990896286
+    identification: 
+      action: Refresh
+
+    settings: 
+      maintain-pagination: false
+
+    affected-elements: 
+      selection-type: Region
+      region: Groups # 8035082169967698409
+
+    execution: 
+      sequence: 10
+      event: Refresh on Edit # 138209592978896285
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Refresh Calendar ====================
+  id: 1726311106779266979
+  identification: 
+    name: Refresh Calendar
+
+  execution: 
+    sequence: 10
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Dialog Closed
+    selection-type: JavaScript Expression
+    javascript-expression: window
+
+  actions: 
+  - # ====== Action: Refresh =====================================
+    id: 1726311515944266979
+    identification: 
+      action: Refresh
+
+    settings: 
+      maintain-pagination: false
+
+    affected-elements: 
+      selection-type: Region
+      region: Groups # 8035082169967698409
+
+    execution: 
+      sequence: 10
+      event: Refresh Calendar # 1726311106779266979
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 1726311991295266980
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: apex.message.showPageSuccess('Action Processed.');
+
+    execution: 
+      sequence: 20
+      event: Refresh Calendar # 1726311106779266979
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+

@@ -1,0 +1,724 @@
+---
+- # ====== Breadcrumb:  Breadcrumb =============================
+  id: 8949440934558156549
+  identification: 
+    name: ' Breadcrumb'
+
+  entries: 
+  - # ====== Entry: Application Appearance =======================
+    id: 1071971470163430666
+    identification: 
+      name: Application Appearance
+      page-number: 41
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:41:&SESSION.'
+        page: 41 # Application Appearance
+
+  - # ====== Entry: Page Privileges ==============================
+    id: 1326188096585741218
+    identification: 
+      name: Page Privileges
+      page-number: 35
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:35:&SESSION.'
+        page: 35 # Page Privileges
+
+  - # ====== Entry: Rename Application ===========================
+    id: 1335980208878021337
+    identification: 
+      name: Rename Application
+      page-number: 37
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:37:&SESSION.'
+        page: 37 # Rename Application
+
+  - # ====== Entry: Time Zone ====================================
+    id: 1348037189071713031
+    identification: 
+      name: Time Zone
+      page-number: 100
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Preferences # 2479769203737486629
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:100:&SESSION.::&DEBUG.:::'
+        page: 100 # Time Zone Preference
+
+  - # ====== Entry: Username Format ==============================
+    id: 1446834292238516490
+    identification: 
+      name: Username Format
+      page-number: 38
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:38:&SESSION.'
+        page: 38 # Username Format
+
+  - # ====== Entry: Add Multiple Users ===========================
+    id: 1446855708961578667
+    identification: 
+      name: Add Multiple Users
+      page-number: 53
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:53:&SESSION.::&DEBUG.:::'
+        page: 53 # Add Multiple Users
+
+  - # ====== Entry: Add Multiple Users ===========================
+    id: 1446869691805612137
+    identification: 
+      name: Add Multiple Users
+      page-number: 54
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:54:&SESSION.::&DEBUG.:::'
+        page: 54 # Add Multiple Users
+
+  - # ====== Entry: Build Options ================================
+    id: 1683821381473989106
+    identification: 
+      name: Build Options
+      page-number: 40
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:40:&SESSION.'
+        page: 40 # Build Options
+
+  - # ====== Entry: Timeline of Future Events ====================
+    id: 1785168042711670037
+    identification: 
+      name: Timeline of Future Events
+      page-number: 12
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:::'
+        page: 12 # Timeline
+
+  - # ====== Entry: Search =======================================
+    id: 1785490777273683750
+    identification: 
+      name: Search
+      page-number: 2
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
+        page: 2 # Search
+
+  - # ====== Entry: Tags =========================================
+    id: 1785529077793708169
+    identification: 
+      name: Tags
+      page-number: 36
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:36:&SESSION.::&DEBUG.:::'
+        page: 36 # Tags
+
+  - # ====== Entry: Calendars ====================================
+    id: 1866197119047429523
+    identification: 
+      name: Calendars
+      page-number: 42
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:42:&SESSION.'
+        page: 42 # Calendars
+
+  - # ====== Entry: Calendar Details =============================
+    id: 1866208856850437346
+    identification: 
+      name: Calendar Details
+      page-number: 44
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Calendars # 1866197119047429523
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:44:&SESSION.'
+        page: 44 # Calendar Details
+
+  - # ====== Entry: Manage Sample Data ===========================
+    id: 1991266316065436014
+    identification: 
+      name: Manage Sample Data
+      page-number: 43
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:43:&SESSION.'
+        page: 43 # Manage Sample Data
+
+  - # ====== Entry: Preferences ==================================
+    id: 2479769203737486629
+    identification: 
+      name: Preferences
+      page-number: 28
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Home # 3265173690769151426
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:28:&SESSION.'
+        page: 28 # Preferences
+
+  - # ====== Entry: Help =========================================
+    id: 3233032900874265388
+    identification: 
+      name: Help
+      page-number: 14
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:14:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 14
+
+  - # ====== Entry: Notifications ================================
+    id: 3265156395415057089
+    identification: 
+      name: Notifications
+      page-number: 4
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.:::'
+        page: 4 # Notifications
+
+  - # ====== Entry: Notification =================================
+    id: 3265167097718067360
+    identification: 
+      name: Notification
+      page-number: 25
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Notifications # 3265156395415057089
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:25:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 25
+
+  - # ====== Entry: Administration ===============================
+    id: 3265172101793115905
+    identification: 
+      name: Administration
+      page-number: 26
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:26:&SESSION.::&DEBUG.:::'
+        page: 26 # Administration
+
+  - # ====== Entry: Home =========================================
+    id: 3265173690769151426
+    identification: 
+      name: Home
+      page-number: 1
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:1:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 1
+
+  - # ====== Entry: User Details =================================
+    id: 3265352986747524444
+    identification: 
+      name: User Details
+      page-number: 30
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Access Control List # 3265363990130674688
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:30:&SESSION.::&DEBUG.:::'
+        page: 30 # User Details
+
+  - # ====== Entry: Access Control List ==========================
+    id: 3265363990130674688
+    identification: 
+      name: Access Control List
+      page-number: 29
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:29:&SESSION.::&DEBUG.:::'
+        page: 29 # Access Control List
+
+  - # ====== Entry: &P3_EVENT_NAME. ==============================
+    id: 3265387296944309715
+    identification: 
+      name: '&P3_EVENT_NAME.'
+      page-number: 3
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Home # 3265173690769151426
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:::'
+        page: 3 # Event Details - &P3_EVENT_NAME.
+
+  - # ====== Entry: Attachments ==================================
+    id: 3265394286555322594
+    identification: 
+      name: Attachments
+      page-number: 31
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: '&P3_EVENT_NAME.' # 3265387296944309715
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:31:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 31
+
+  - # ====== Entry: Attachment ===================================
+    id: 3265402693770336231
+    identification: 
+      name: Attachment
+      page-number: 32
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Attachments # 3265394286555322594
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:32:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 32
+
+  - # ====== Entry: Event Update =================================
+    id: 3266085083185052242
+    identification: 
+      name: Event Update
+      page-number: 33
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: '&P3_EVENT_NAME.' # 3265387296944309715
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:33:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 33
+
+  - # ====== Entry: Event Updates ================================
+    id: 3266092192134068081
+    identification: 
+      name: Event Updates
+      page-number: 34
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: '&P3_EVENT_NAME.' # 3265387296944309715
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:34:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 34
+
+  - # ====== Entry: Application Error Log ========================
+    id: 3314603998472232629
+    identification: 
+      name: Application Error Log
+      page-number: 175
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:175:&SESSION.::&DEBUG.:::'
+        page: 175 # Application Error Log
+
+  - # ====== Entry: Activity Calendar ============================
+    id: 3343167100485714235
+    identification: 
+      name: Activity Calendar
+      page-number: 9
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:9:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 9
+
+  - # ====== Entry: Delete Multiple ==============================
+    id: 7443840242321720034
+    identification: 
+      name: Delete Multiple
+      page-number: 13
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Search # 1785490777273683750
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:13:&SESSION.::&DEBUG.:::'
+        page: 13 # Delete Multiple Events
+
+  - # ====== Entry: Send Email ===================================
+    id: 8035065288332595537
+    identification: 
+      name: Send Email
+      page-number: 15
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.:::'
+        page: 15 # Send Email
+
+  - # ====== Entry: Groups =======================================
+    id: 8035084566370698436
+    identification: 
+      name: Groups
+      page-number: 16
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:::'
+        page: 16 # Groups
+
+  - # ====== Entry: Details ======================================
+    id: 8035090680187702697
+    identification: 
+      name: Details
+      page-number: 17
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Groups # 8035084566370698436
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:17:&SESSION.::&DEBUG.:::'
+        page: 17 # Group Details
+
+  - # ====== Entry: Group Members ================================
+    id: 8035703064183798941
+    identification: 
+      name: Group Members
+      page-number: 18
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.:::'
+        page: 18 # Group Members
+
+  - # ====== Entry: Details ======================================
+    id: 8035728581634861926
+    identification: 
+      name: Details
+      page-number: 19
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Group Members # 8035703064183798941
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:19:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 19
+
+  - # ====== Entry: Add Multiple Members =========================
+    id: 8042337667101234712
+    identification: 
+      name: Add Multiple Members
+      page-number: 21
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Group Members # 8035703064183798941
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:21:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 21
+
+  - # ====== Entry: Add Multiple Members =========================
+    id: 8042417981907319023
+    identification: 
+      name: Add Multiple Members
+      page-number: 22
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Group Members # 8035703064183798941
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:22:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 22
+
+  - # ====== Entry: Reporting Time Frames ========================
+    id: 8043503172828141200
+    identification: 
+      name: Reporting Time Frames
+      page-number: 23
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:23:&SESSION.::&DEBUG.:::'
+        page: 23 # Reporting Time Frames
+
+  - # ====== Entry: Details ======================================
+    id: 8043516179586165410
+    identification: 
+      name: Details
+      page-number: 24
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Reporting Time Frames # 8043503172828141200
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:24:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 24
+
+  - # ====== Entry: Update or Delete Affects =====================
+    id: 8530058694749227244
+    identification: 
+      name: Update or Delete Affects
+      page-number: 11
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Event # 8949464138316156709
+
+    link: 
+      target: 
+        url: 'f?p=&FLOW_ID.:11:&SESSION.'
+        app: '&FLOW_ID.'
+        page: 11
+
+  - # ====== Entry: Event Types ==================================
+    id: 8949455329543156680
+    identification: 
+      name: Event Types
+      page-number: 7
+
+    execution: 
+      sequence: 70
+
+    appearance: 
+      parent-entry: Administration # 3265172101793115905
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.:::'
+        page: 7 # Event Types
+
+  - # ====== Entry: Details ======================================
+    id: 8949457953680156693
+    identification: 
+      name: Details
+      page-number: 8
+
+    execution: 
+      sequence: 80
+
+    appearance: 
+      parent-entry: Event Types # 8949455329543156680
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.:::'
+        page: 8 # Event Type Details
+
+  - # ====== Entry: Event ========================================
+    id: 8949464138316156709
+    identification: 
+      name: Event
+      page-number: 10
+
+    execution: 
+      sequence: 100
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.:::'
+        page: 10 # Event Details
+
